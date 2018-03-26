@@ -109,4 +109,11 @@ public class TestFacture {
 		calculerFacture.AddFactFinal(addNomFinalFact); ;
 		assertNotNull(addNomFinalFact);
 	}
+	
+	@Test
+	public void testerIsFacturAddedValid() {
+		ArrayList<String> factAdded = new ArrayList<String>();
+		calculerFacture.AddFactFinal(factAdded); ;
+		assertNotNull(factAdded);
+	}
 }
