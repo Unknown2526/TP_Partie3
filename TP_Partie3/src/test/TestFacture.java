@@ -88,4 +88,25 @@ public class TestFacture {
 		calculerFacture.AddFactFinal(addFinalFact); ;
 		assertNotNull(addFinalFact);
 	}
+	
+	@Test
+	public void testerCalculTaxe() {
+		CalculerFacture tax = new CalculerFacture(nom, plat, commande);
+		double taxAttendu =1.15;
+		tax.calculTaxe(1.00);
+		assertNotEquals(taxAttendu,tax);		
+	}
+	
+	@Test
+	public void testerIsFacture() {
+		verifier = lireFichier.isFacture();
+		assertTrue(verifier);		
+	}
+	
+	@Test
+	public void testerAddNomFactFinal() {
+		ArrayList<String> addNomFinalFact = new ArrayList<String>();
+		calculerFacture.AddFactFinal(addNomFinalFact); ;
+		assertNotNull(addNomFinalFact);
+	}
 }
