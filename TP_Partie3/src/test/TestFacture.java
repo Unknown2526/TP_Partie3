@@ -116,4 +116,11 @@ public class TestFacture {
 		calculerFacture.AddFactFinal(factAdded); ;
 		assertNotNull(factAdded);
 	}
+	
+	@Test
+	public void testerIsPrixValid() {
+		ArrayList<String> pxValid = new ArrayList<String>();
+		calculerFacture.AddFactFinal(pxValid); ;
+		assertNotNull(pxValid);
+	}
 }
