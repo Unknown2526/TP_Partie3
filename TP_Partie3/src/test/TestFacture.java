@@ -57,6 +57,12 @@ public class TestFacture {
 	}
 	
 	@Test
+	public void testerFormat() {		
+		verifier = verification.verifieFichier();		
+		assertTrue(verifier);
+	}
+	
+	@Test
 	public void testerPrix() {		
 		verifier = verification.verifiePrix();		
 		assertFalse(verifier);
@@ -68,5 +74,18 @@ public class TestFacture {
 		calculerFacture.calculer(factureFinal);
 		assertNotNull(factureFinal);	
 	}
+	
+	@Test
+	public void testerLireFichier() {	
+		ArrayList<List<String>> lect = new ArrayList<List<String>>();
+		lect = lireFichier.lire() ;
+		assertNotNull(lect );		
+	}
 
+	@Test
+	public void testerAddFactFinal() {
+		ArrayList<String> addFinalFact = new ArrayList<String>();
+		calculerFacture.AddFactFinal(addFinalFact); ;
+		assertNotNull(addFinalFact);
+	}
 }
