@@ -55,5 +55,18 @@ public class TestFacture {
 		verifier = verification.verifiePlatCommande();
 		assertTrue(verifier);
 	}
+	
+	@Test
+	public void testerPrix() {		
+		verifier = verification.verifiePrix();		
+		assertFalse(verifier);
+	}
+	
+	@Test
+	public void testerCalculer() {
+		
+		calculerFacture.calculer(factureFinal);
+		assertNotNull(factureFinal);	
+	}
 
 }
